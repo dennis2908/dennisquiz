@@ -17,6 +17,10 @@
   padding: 13px;
 }
 
+.draggable {
+    touch-action: none
+}
+
 img {
   height: 45px;
 }
