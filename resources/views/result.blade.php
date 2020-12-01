@@ -84,5 +84,12 @@ swal("Keren!", "Jawaban kamu benar", "success");
 </script>
 @php Session::forget('good') @endphp
 @endif
+
+@if(Session::has('bad'))
+<script>
+swal("Uppss!", "Jawaban kamu salah", "error");
+</script>
+@php Session::forget('bad') @endphp
+@endif
 </body>
 </html> 

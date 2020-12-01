@@ -110,6 +110,9 @@ class HomeController extends Controller
 				Session::put('score',$score+1);
 				Session::put('good',1);
 			}
+			else{
+				Session::put('bad',1);
+			}
 		}
 		elseif(in_array($type,$typeTwo)){
 			$anwDB = explode(',',$answer);
@@ -117,6 +120,9 @@ class HomeController extends Controller
 				$score = Session::get('score');
 				Session::put('score',$score+1);
 				Session::put('good',1);
+			}
+			else{
+				Session::put('bad',1);
 			}
 		}
 		
