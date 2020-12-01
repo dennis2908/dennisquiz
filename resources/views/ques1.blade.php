@@ -3,7 +3,7 @@
 <form method="POST" action="{{route('submit')}}" >
 @csrf
  <div class="row p-1">
-    <div class="col-xl-1">
+    <div class="col-xl-12">
       <label for="answer"><b>{{$urut}}. Mana lebih besar 3110 atau 3220</b></label>
     </div>
     <div class="col-md-3">

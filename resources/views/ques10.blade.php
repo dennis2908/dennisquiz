@@ -3,7 +3,7 @@
 <form method="POST" action="{{route('submit')}}" >
 @csrf
   <div class="row p-1">
-    <div class="col-xl-1">
+    <div class="col-xl-12">
       <label for="answer"><b>{{$urut}}. Yang mana memberikan hasil 30 (Pilih Dua)</b></label>
     </div>
 	<div class="col-md-2">

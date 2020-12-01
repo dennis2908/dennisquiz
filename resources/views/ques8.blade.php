@@ -30,7 +30,7 @@ img {
 <input name="answer" id="answer" type="hidden" value="4+4">
 @csrf
   <div class="row p-1">
-    <div class="col-xl-1">
+    <div class="col-xl-12">
       <label for="answer"><b>{{$urut}}. Yang mana memberikan hasil 6 (Drag Gambar jawabannya Ke Kolom Pasangannya) </b></label>
     </div>
 	<div class="col-xl-6">
