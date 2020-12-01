@@ -21,11 +21,11 @@
             <label class="form-check-label">5+25</label>
           </div>
         </div>
-    <div class="col-md-3 alert alert-danger" role="alert">
+    <div class="col-md-4 alert alert-danger text-center" role="alert">
 	</div>  
 	<div class="text-center">
                              <input type="hidden" value="10" class="form-control" name="no_question">
-                            <button type="submit" class="btn btn-warning mt-2 px-4">Jawab</button>
+                            <button type="submit" id="checkBtn" class="btn btn-warning mt-2 px-4">Jawab</button>
                         </div>
 </form>  
 

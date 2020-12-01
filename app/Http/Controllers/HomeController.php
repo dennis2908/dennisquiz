@@ -108,6 +108,7 @@ class HomeController extends Controller
 			{
 				$score = Session::get('score');
 				Session::put('score',$score+1);
+				Session::put('good',1);
 			}
 		}
 		elseif(in_array($type,$typeTwo)){
@@ -115,6 +116,7 @@ class HomeController extends Controller
 			if(count(array_intersect($request->answer, $anwDB)) == count($request->answer)){
 				$score = Session::get('score');
 				Session::put('score',$score+1);
+				Session::put('good',1);
 			}
 		}
 		
