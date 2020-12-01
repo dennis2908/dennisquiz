@@ -21,6 +21,7 @@ img {
   height: 45px;
 }
 </style>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <form method="POST" action="{{route('submit')}}" >
 <input name="answer" id="answer" type="hidden" value="4+4">
 @csrf
