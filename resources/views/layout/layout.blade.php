@@ -85,7 +85,7 @@ swal({
 title: "Keren!",
      text: "Jawaban kamu benar",
      type: "success",
-     timer: 1000,
+     timer: 1500,
 	 icon:'success',
 	 buttons:false
 })
@@ -99,7 +99,7 @@ swal({
 title: "Uppss!",
      text: "Jawaban kamu salah",
      type: "error",
-     timer: 1000,
+     timer: 1500,
 	 icon:'error',
 	 buttons:false
 })
