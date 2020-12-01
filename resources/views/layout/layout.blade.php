@@ -21,10 +21,10 @@ body{
             <div class="col-md-8 offset-md-2">
                 <div class="card card-body shadow border-0">
                     <div class="d-flex flex-row align-item-center mb-3">
-                        <h2 class="mr-auto">Jawab {{Session::get('length')}} Pertanyaan Berikut!</h2>
-                        <h4 class="ml-auto">Skor Anda : <span
+                        <h5 class="mr-auto">Jawab {{Session::get('length')}} Pertanyaan Berikut!</h5>
+                        <h6 class="ml-auto">Skor Anda : <span
                                 class="badge badge-success p-2">{{session::get('score')}}</span>
-                        </h4>
+                        </h6>
                     </div>@yield('content')
 @if(Session::has('final_arr'))
 <h4><span class="badge badge-primary p-1">Ini pertanyaan terakhir !!</span></h4>

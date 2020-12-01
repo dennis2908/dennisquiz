@@ -20,7 +20,7 @@ body{
             <div class="col-md-8 offset-md-2">
                 <div class="card card-body shadow border-0">
 				<div class="text-center">
-<h2><span class="badge badge-secondary p-1">Hasil Test Anda</span></h2>
+<h3><span class="badge badge-secondary p-1">Hasil Test Anda</span></h3>
 <h4 class="ml-auto">Benar : <span
                                 class="badge badge-success p-2">{{session::get('score')}}</span>
                         </h4>
