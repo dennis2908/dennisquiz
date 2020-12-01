@@ -2,19 +2,11 @@
 @section('content')
 <form method="POST" action="{{route('submit')}}" >
 @csrf
-  <div class="row p-1">
-    <div class="col-xl-12">
-      <label for="answer"><b>{{$urut}}. Mana lebih kecil 8000, 4000, 20000 atau 6000</b></label>
-    </div>
-    <div class="col-md-3">
-      <input type="text" class="form-control" name="answer" required>
-	  <input type="hidden" value="11" class="form-control" name="no_question">
-    </div>
-  </div>	
-  <div class="row p-1">
-    <div class="col-xl-1">
-	  <button type="submit" class="btn btn-warning"><span class="badge badge-warning">Jawab</span></button>
-    </div>
-  </div>
+  <label for="answer"><b>{{$urut}}. Mana lebih kecil 8000, 4000, 20000 atau 6000</b></label>
+                        <input type="text" class="form-control" name="answer" required>
+                        <input type="hidden" value="11" class="form-control" name="no_question">
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-warning mt-2 px-4">Jawab</button>
+                        </div>
 </form>  
 @stop  

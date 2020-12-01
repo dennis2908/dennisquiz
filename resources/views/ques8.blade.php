@@ -3,7 +3,7 @@
 <style>
 #div1, #div2,#div3 {
   float: left;
-  width: 110px;
+  width: 190px;
   height: 70px;
   margin: 10px;
   padding: 10px;
@@ -11,7 +11,7 @@
 }
 #div4, #div5,#div6 {
   float: left;
-  width: 110px;
+  width: 190px;
   height: 70px;
   margin: 13px;
   padding: 13px;
@@ -23,17 +23,16 @@
 
 img {
   height: 45px;
+  width: 170px;
 }
 </style>
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <form method="POST" action="{{route('submit')}}" >
 <input name="answer" id="answer" type="hidden" value="4+4">
 @csrf
-  <div class="row p-1">
-    <div class="col-xl-12">
-      <label for="answer"><b>{{$urut}}. Yang mana memberikan hasil 6 (Drag Gambar jawabannya Ke Kolom Pasangannya) </b></label>
-    </div>
-	<div class="col-xl-6">
+  <label for="answer"><b>{{$urut}}. Yang mana memberikan hasil 6 (Drag Gambar jawabannya Ke Kolom Pasangannya) </b></label>
+
+	<div class="col-md-16">
 			<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
 			  <input id="div1answer" type="hidden" value="4+4">
 			  <img src="images/answer.jpg" ondragstart="drag(event)" id="drag1" width="88" height="31">
@@ -48,7 +47,7 @@ img {
 			</div>
 
     </div>
-	<div class="col-xl-6">
+	<div class="col-md-16">
 			<div id="div4">4 + 4
 			</div>
 
@@ -57,15 +56,13 @@ img {
 			<div id="div6">3 + 4</div>
 
     </div>
-    <div class="col-md-3">
-	  <input type="hidden" value="8" class="form-control" name="no_question">
+    <div class="col-md-16">
+                        <input type="hidden" value="8" class="form-control" name="no_question">
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-warning mt-2 px-4">Jawab</button>
+                        </div>
     </div>
   </div>	
-  <div class="row p-1">
-    <div class="col-xl-1">
-	  <button type="submit" id="checkBtn" class="btn btn-warning"><span class="badge badge-warning">Jawab</span></button>
-    </div>
-  </div>
 </form>  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>

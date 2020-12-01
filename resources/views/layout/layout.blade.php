@@ -15,14 +15,24 @@ body{
 	background-image: url("images/background.jpg");
 }
 </style>
-<div class="container">
-<h2><span class="badge badge-secondary p-1">Jawab {{Session::get('length')}} Pertanyaan Berikut!</span></h2>
-<h6><span class="badge badge-success p-1">Skor anda</span> : <span class="badge badge-success p-1">{{session::get('score')}}</span></h6>
-@yield('content')
+
+<div class="container mt-4">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="card card-body shadow border-0">
+                    <div class="d-flex flex-row align-item-center mb-3">
+                        <h2 class="mr-auto">Jawab {{Session::get('length')}} Pertanyaan Berikut!</h2>
+                        <h4 class="ml-auto">Skor Anda : <span
+                                class="badge badge-success p-2">{{session::get('score')}}</span>
+                        </h4>
+                    </div>@yield('content')
 @if(Session::has('final_arr'))
 <h4><span class="badge badge-primary p-1">Ini pertanyaan terakhir !!</span></h4>
 @endif
 </div>
+            </div>
+        </div>
+    </div>
 <script>
 $(function() {
     // WARNING: Extremely hacky code ahead. jQuery mobile automatically
