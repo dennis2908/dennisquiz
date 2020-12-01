@@ -60,7 +60,7 @@ class HomeController extends Controller
 			else{
 				$urut = ($this->length) - count($array_rand);
 			}
-			return view('result',compact('urut'));
+			return view('ques11',compact('urut'));
 		}
 		
 		
