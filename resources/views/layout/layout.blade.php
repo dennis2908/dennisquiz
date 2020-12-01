@@ -81,14 +81,28 @@ $(function() {
 </script>
 @if(Session::has('good'))
 <script>
-swal("Keren!", "Jawaban kamu benar", "success");
+swal({
+title: "Keren!",
+     text: "Jawaban kamu benar",
+     type: "success",
+     timer: 1000,
+	 icon:'success',
+	 buttons:false
+})
 </script>
 @php Session::forget('good') @endphp
 @endif
 
 @if(Session::has('bad'))
 <script>
-swal("Uppss!", "Jawaban kamu salah", "error");
+swal({
+title: "Uppss!",
+     text: "Jawaban kamu salah",
+     type: "error",
+     timer: 1000,
+	 icon:'error',
+	 buttons:false
+})
 </script>
 @php Session::forget('bad') @endphp
 @endif
