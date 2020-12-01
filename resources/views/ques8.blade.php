@@ -36,7 +36,7 @@ img {
 	<div class="col-xl-6">
 			<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
 			  <input id="div1answer" type="hidden" value="4+4">
-			  <img src="images/answer.jpg" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">
+			  <img src="images/answer.jpg" ondragstart="drag(event)" id="drag1" width="88" height="31">
 			</div>
 
 			<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
@@ -71,6 +71,8 @@ img {
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script type="text/javascript">
+  
+  
 
 function allowDrop(ev) {
   ev.preventDefault();
