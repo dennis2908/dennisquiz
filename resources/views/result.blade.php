@@ -15,10 +15,22 @@ body{
 	background-image: url("images/background_a.jpg");
 }
 </style>
-<div class="container justify-content-center">
+<div class="container mt-4">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="card card-body shadow border-0">
+				<div class="text-center">
 <h2><span class="badge badge-secondary p-1">Hasil Test Anda</span></h2>
-<h4><span class="badge badge-success p-1">Benar </span> : <span class="badge badge-success p-1">{{session::get('score')}}</span></h4>
-<h4><span class="badge badge-danger p-1">Salah </span> : <span class="badge badge-danger p-1">{{session::get('incorrect')}}</span></h4>
+<h4 class="ml-auto">Benar : <span
+                                class="badge badge-success p-2">{{session::get('score')}}</span>
+                        </h4>
+						<h4 class="ml-auto">Salah : <span
+                                class="badge badge-danger p-2">{{session::get('incorrect')}}</span>
+                        </h4>
+</div>
+</div>
+</div>
+</div>
 </div>
 <script>
 $(function() {
