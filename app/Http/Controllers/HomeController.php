@@ -43,6 +43,15 @@ class HomeController extends Controller
 			return view('result');
 		}
 		
+	    if(!Session::has('array_randomx'))
+		{
+			Session::put('array_randomx',$this->randomNumbers(1,$this->length,$this->length));
+			Session::put('score',0);
+			Session::put('incorrect',0);
+			Session::put('counter',1);
+			Session::forget('final_arr');			
+		}
+		
 		if(!Session::has('counter')){
 			$array_rand = Session::get('array_randomx');
 			if(!$array_rand){
@@ -52,15 +61,6 @@ class HomeController extends Controller
 				$urut = ($this->length) - count($array_rand);
 			}
 			return view('ques11',compact('urut'));
-		}
-		
-		if(!Session::has('array_randomx'))
-		{
-			Session::put('array_randomx',$this->randomNumbers(1,$this->length,$this->length));
-			Session::put('score',0);
-			Session::put('incorrect',0);
-			Session::put('counter',1);
-			Session::forget('final_arr');			
 		}
 		
 		
