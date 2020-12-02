@@ -46,9 +46,9 @@ class HomeController extends Controller
 				}
 				
 				$html .= "<div class='col-xl-16 p-1'><label><b>".$icon." ".($i+1).". ".$getanswer['question']."</b></label></div>";
-				$html .= "<div class='col-xl-16' style='margin-left:50px !important'><label><b> Jawaban Kamu : ".$myanswer[$i]."</b></label></div>";
-				$html .= "<div class='col-xl-16' style='margin-left:50px !important'><label><b> Jawaban Benar : ".$getanswer['answer']."</b></label></div>";
-				$html .= "<div class='col-xl-16' style='margin-left:50px !important'><label><b> Jawaban Kamu ".$match." ".$iconsmall."</b></label></div>";
+				$html .= "<div class='col-xl-16'><label><b> Jawaban Kamu : ".$myanswer[$i]."</b></label></div>";
+				$html .= "<div class='col-xl-16'><label><b> Jawaban Benar : ".$getanswer['answer']."</b></label></div>";
+				$html .= "<div class='col-xl-16'><label><b> Jawaban Kamu ".$match." ".$iconsmall."</b></label></div>";
 				$i++;
 			}
 			Session::forget('myanswer');

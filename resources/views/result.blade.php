@@ -31,7 +31,7 @@ body{
                                 class="badge badge-danger p-2">{{session::get('incorrect')}}</span>
                         </h4>
 </div>
-<div class="text-left p-5">
+<div class="text-center p-5">
 {!! $html !!}
 </div>
 </div>
