@@ -16,7 +16,7 @@ class HomeController extends Controller
 	function index(){
 		//Session::put('array_rand',$this->randomNumbers(1,5,5));
 		//Session::forget('score');
-		//Session::flush();
+		Session::flush();
 		if(Session::has('final_arr') && Session::has('counter')){
 			Session::forget('final_arr');
 			Session::put('length',$this->length);
@@ -139,8 +139,8 @@ class HomeController extends Controller
 			
 		}
 		elseif(in_array($type,$typeTwo)){
-			$anw = explode(' , ',$answer);
-			if(count(array_intersect($request->answer, $anw)) == count($request->answer)){
+			$anwdb = explode(' , ',$answer);
+			if(count(array_intersect($request->answer, $anwdb)) == count($request->answer)){
 				$score = Session::get('score');
 				Session::put('score',$score+1);
 				Session::put('good',1);
@@ -148,6 +148,8 @@ class HomeController extends Controller
 			else{
 				Session::put('bad',1);
 			}
+			
+			$anw = implode(' , ',str_replace(" ","",$request->answer));
 			
 		
 		}
