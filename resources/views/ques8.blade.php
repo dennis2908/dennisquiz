@@ -20,7 +20,7 @@ img {
 <form method="POST" autocomplete="off" action="{{route('submit')}}" >
 <input name="answer" id="answer" type="hidden" value="4+4">
 @csrf
-  <label for="answer"><b>{{$urut}}. Yang mana memberikan hasil 6 (Drag Gambar jawabannya Ke Kolom Pasangannya) </b></label>
+  <label for="answer"><b>{{$urut}}. {{$question}}</b></label>
 
 	<div class="col-xl-12">
 			<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
