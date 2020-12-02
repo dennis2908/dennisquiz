@@ -1,6 +1,6 @@
 @extends('layout.layout')
 @section('content')
-<form method="POST" action="{{route('submit')}}" >
+<form method="POST" autocomplete="off" action="{{route('submit')}}" >
 @csrf
    <label for="answer"><b>{{$urut}}. {{$question}}</b></label>
                         <input type="text" class="form-control" name="answer" required>

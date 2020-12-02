@@ -69,8 +69,9 @@ class HomeController extends Controller
 			Session::forget('final_arr');			
 		}
 		
+		$urut = Session::get('no_urut');
+		
 		if(!Session::has('counter')){
-			$urut = Session::get('no_urut');
 			$arracakf = Session::get('array_randomxy');
 			$arracakf[$urut-1] = $this->randSoal;
 			Session::put('array_randomxy',$arracakf);
@@ -95,8 +96,6 @@ class HomeController extends Controller
 		}
 		
 		Session::forget('counter');
-		
-		$urut = Session::get('no_urut');
 		
 		$question = answer::where('id',$no)->first()['question'];
 		return view('ques'.$no,compact('question','urut'));
@@ -140,8 +139,8 @@ class HomeController extends Controller
 			
 		}
 		elseif(in_array($type,$typeTwo)){
-			$anwDB = explode(' , ',$answer);
-			if(count(array_intersect($request->answer, $anwDB)) == count($request->answer)){
+			$anw = explode(' , ',$answer);
+			if(count(array_intersect($request->answer, $anw)) == count($request->answer)){
 				$score = Session::get('score');
 				Session::put('score',$score+1);
 				Session::put('good',1);
@@ -150,8 +149,6 @@ class HomeController extends Controller
 				Session::put('bad',1);
 			}
 			
-			$anw = implode(',',str_replace(" ","",$request->answer));
-			
 		
 		}
 		
@@ -159,7 +156,7 @@ class HomeController extends Controller
 		Session::put('myanswer',$myanswer);
 		Session::put('counter',1);
 		$no_urut = Session::get('no_urut');
-		Session::put('no_urut',$no_urut++);
+		Session::put('no_urut',$no_urut+1);
 		return redirect()->route('index');
 	}
 }

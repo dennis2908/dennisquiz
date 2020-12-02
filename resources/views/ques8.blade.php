@@ -17,7 +17,7 @@ img {
 }
 </style>
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-<form method="POST" action="{{route('submit')}}" >
+<form method="POST" autocomplete="off" action="{{route('submit')}}" >
 <input name="answer" id="answer" type="hidden" value="4+4">
 @csrf
   <label for="answer"><b>{{$urut}}. Yang mana memberikan hasil 6 (Drag Gambar jawabannya Ke Kolom Pasangannya) </b></label>
