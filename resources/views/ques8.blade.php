@@ -2,28 +2,18 @@
 @section('content')
 <style>
 #div1, #div2,#div3 {
-  float: left;
-  width: 190px;
-  height: 70px;
-  margin: 10px;
-  padding: 10px;
-  border: 1px solid black;
-}
-#div4, #div5,#div6 {
-  float: left;
-  width: 190px;
-  height: 70px;
-  margin: 13px;
-  padding: 13px;
+  float: left !important;
+  width: 100px !important;
+  height: 70px !important;
+  margin: 10px !important;
+  padding: 10px !important;
+  border: 1px solid black !important;;
 }
 
-.draggable {
-    touch-action: none
-}
 
 img {
-  height: 45px;
-  width: 170px;
+  height: 45px !important;
+  width: 80px !important;
 }
 </style>
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -32,7 +22,7 @@ img {
 @csrf
   <label for="answer"><b>{{$urut}}. Yang mana memberikan hasil 6 (Drag Gambar jawabannya Ke Kolom Pasangannya) </b></label>
 
-	<div class="col-md-16">
+	<div class="col-xl-12">
 			<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
 			  <input id="div1answer" type="hidden" value="4+4">
 			  <img src="images/answer.jpg" ondragstart="drag(event)" id="drag1" width="88" height="31">
@@ -45,24 +35,25 @@ img {
 			<div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)">
 			<input id="div3answer" type="hidden" value="3+4">
 			</div>
-
-    </div>
-	<div class="col-md-16">
-			<div id="div4">4 + 4
+			
+			<div class="col-md-12" style="clear:left;"><div class="col-md-3" style="float:left !important;margin-left:10px !important">4+4</div>
+			<div style="float:left !important;margin-left:5px !important" class="col-md-3">2+4</div><div style="float:left !important;margin-left:-10px;position:fix !important" class="col-md-3">3+4</div>
+			</div>
 			</div>
 
-			<div id="div5">2 + 4</div>
+			<div>
+			</div>
 
-			<div id="div6">3 + 4</div>
-
-    </div>
-    <div class="col-md-16">
-                        <input type="hidden" value="8" class="form-control" name="no_question">
-                        <div class="text-center">
-                            <button type="submit" class="btn btn-warning mt-2 px-4">Jawab</button>
+			<div >
+			</div>
+    <div class="row p-5 col-xl-14">
+                        <div class="text-center x-5" style="margin-top:20px;margin-left:-230px">
+						<input type="hidden" value="8" class="form-control" name="no_question">
+                        
+                            <button type="submit" style='margin-bottom:50px' class="btn btn-warning mt-2 px-4">Jawab</button>
                         </div>
     </div>
-  </div>	
+    </div>	
 </form>  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>

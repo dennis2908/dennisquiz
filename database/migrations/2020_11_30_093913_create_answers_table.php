@@ -15,8 +15,9 @@ class CreateAnswersTable extends Migration
     {
         Schema::create('answers', function (Blueprint $table) {
             $table->bigIncrements('id');
-			$table->string('type');
-			$table->string('answer',2000);
+			$table->string('type')->nullable();
+			$table->string('answer')->nullable();
+			$table->string('question',2000)->nullable();
             $table->timestamps();
         });
     }

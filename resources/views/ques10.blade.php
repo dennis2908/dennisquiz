@@ -2,7 +2,7 @@
 @section('content')
 <form method="POST" action="{{route('submit')}}" >
 @csrf
-    <label for="answer"><b>{{$urut}}. Yang mana memberikan hasil 30 (Pilih Dua)</b></label>
+    <label for="answer"><b>{{$urut}}. {{$question}}</b></label>
 	<div class="col-md-2">
           <div class="form-check">
             <input type="checkbox" class="form-check-input" value="20+10" name="answer[]">

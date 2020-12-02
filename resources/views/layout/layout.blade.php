@@ -22,13 +22,16 @@ body{
                 <div class="card card-body shadow border-0">
                     <div class="d-flex flex-row align-item-center mb-3">
                         <h5 class="mr-auto">Jawab {{Session::get('length')}} Pertanyaan Berikut!</h5>
-                        <h6 class="ml-auto">Skor Anda : <span
+						<h6 class="ml-auto">Skor Anda : <span
                                 class="badge badge-success p-2">{{session::get('score')}}</span>
                         </h6>
-                    </div>@yield('content')
-@if(Session::has('final_arr'))
-<h4><span class="badge badge-primary p-1">Ini pertanyaan terakhir !!</span></h4>
-@endif
+                    </div>
+					<div class="d-flex flex-row align-item-center mb-3">
+						@if(Session::has('final_arr'))
+						<h6 class="mr-auto"><span class="badge badge-primary p-1">Ini pertanyaan terakhir !!</span></h6>
+						@endif
+                    </div>
+					@yield('content')
 </div>
             </div>
         </div>
