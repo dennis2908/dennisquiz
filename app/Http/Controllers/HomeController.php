@@ -16,7 +16,7 @@ class HomeController extends Controller
 	function index(){
 		//Session::put('array_rand',$this->randomNumbers(1,5,5));
 		//Session::forget('score');
-		Session::flush();
+		//Session::flush();
 		if(Session::has('final_arr') && Session::has('counter')){
 			Session::forget('final_arr');
 			Session::put('length',$this->length);
