@@ -18,7 +18,7 @@ body{
 </style>
 <div class="container mt-4">
         <div class="row">
-            <div class="col-md-10 offset-md-2">
+            <div class="col-md-11 offset-md-2">
                 <div class="card card-body shadow border-0">
 				<div class="text-left">
 <h3><span class="badge badge-secondary p-1">Hasil Test Anda</span></h3>
