@@ -19,7 +19,6 @@ class HomeController extends Controller
 		//Session::flush();
 		if(Session::has('final_arr') && Session::has('counter')){
 			Session::forget('final_arr');
-			Session::put('length',$this->length);
 			Session::put('incorrect',$this->length - Session::get('score'));
 			$html = "";
 			$myanswer = Session::get('myanswer');
@@ -59,6 +58,7 @@ class HomeController extends Controller
 		
 	    if(!Session::has('array_randomx'))
 		{   
+			Session::put('length',$this->length);
 			Session::put('no_urut',1);
 			$arracak = $this->randomNumbers(1,$this->length,$this->length);
 			Session::put('array_randomx',$arracak);
