@@ -34,6 +34,7 @@ $(document).ready(function () {
     $('.alert').hide();
     $('#checkBtn').click(function() {
       checked = $("input[type=checkbox]:checked").length;
+      console.log(121,checked);
 
       if(!checked) {
 		$('.alert').show();

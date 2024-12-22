@@ -27,6 +27,11 @@ $app = new Illuminate\Foundation\Application(
 */
 
 $app->singleton(
+    Illuminate\Contracts\Debug\ExceptionHandler::class,
+    App\Exceptions\Handler::class // Change this line with the new namespace
+);
+
+$app->singleton(
     Illuminate\Contracts\Http\Kernel::class,
     App\Http\Kernel::class
 );
