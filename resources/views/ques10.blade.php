@@ -33,8 +33,10 @@
 $(document).ready(function () {
     $('.alert').hide();
     $('#checkBtn').click(function() {
-      checked = $("input[type=checkbox]:checked").length;
+      checked = $('[name="answer[]"]:checked').length;
+      let jjj = $('[name="answer[]"]:checked').val();
       console.log(121,checked);
+      console.log(121,jjj);
 
       if(!checked) {
 		$('.alert').show();
@@ -51,8 +53,9 @@ $(document).ready(function () {
 		$('.alert').html('Pilih Dua Jawaban');  
         return false;
       }
-
     });
+
+    
 });
 
 </script>

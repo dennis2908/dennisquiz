@@ -139,8 +139,9 @@ class HomeController extends Controller
 			
 		}
 		elseif(in_array($type,$typeTwo)){
-			$anwdb = explode(' , ',$answer);
-			if(count(array_intersect($request->answer, $anwdb)) == count($request->answer)){
+			// $anwdb = explode(' , ',$answer);
+			// dd($answer);
+			if($answer == implode(',', preg_replace('/\s+/', '', $request->answer))){
 				$score = Session::get('score');
 				Session::put('score',$score+1);
 				Session::put('good',1);
@@ -149,7 +150,7 @@ class HomeController extends Controller
 				Session::put('bad',1);
 			}
 			
-			$anw = implode(' , ',str_replace(" ","",$request->answer));
+			$anw = implode(',', preg_replace('/\s+/', '', $request->answer));
 			
 		
 		}
